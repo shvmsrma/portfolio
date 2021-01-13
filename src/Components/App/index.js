@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import * as s from "./app.module.scss";
-
 import Header from "../Header";
 import Footer from "../Footer";
 import Main from "../Main";

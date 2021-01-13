@@ -1,4 +1,12 @@
 .container {
-  height: 10vh;
-  background-color: orange;
+  display: flex;
+  height: 70px;
+  //background-color: orange;
+
+  .link {
+    background-color: red;
+  }
+  .selectedLink {
+    background-color: black;
+  }
 }
