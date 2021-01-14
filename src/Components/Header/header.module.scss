@@ -1,12 +1,38 @@
 .container {
+  width: 100%;
   display: flex;
-  height: 70px;
-  //background-color: orange;
-
-  .link {
-    background-color: red;
+  .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 60px;
+    }
   }
-  .selectedLink {
-    background-color: black;
+  .links {
+    flex: 1;
+    display: flex;
+    height: 60px;
+    //width: 600px;
+    background-color: inherit;
+    align-items: center;
+    justify-content: space-evenly;
+    .link {
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+    }
+    .selectedLink {
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+    }
+    .link:hover {
+      font-size: 22px;
+    }
+    .selectedLink:hover {
+      font-size: 22px;
+    }
   }
 }

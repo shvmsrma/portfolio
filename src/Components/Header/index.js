@@ -4,6 +4,7 @@ import { Link } from "@reach/router";
 import cx from "classnames";
 import { connect } from "react-redux";
 import { setSelectedPage } from "../../Actions/index";
+import shivamImg from "../../assets/svgs/shivam.png";
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -19,28 +20,32 @@ class Header extends Component {
 
     return (
       <div className={s.container}>
-        Header
-        <Link
-          to="/"
-          className={selectedpage == "app" ? s.selectedLink : s.link}
-          onClick={() => this.onSelectPage("app")}
-        >
-          Home
-        </Link>
-        <Link
-          to="/about"
-          className={selectedpage == "about" ? s.selectedLink : s.link}
-          onClick={() => this.onSelectPage("about")}
-        >
-          About
-        </Link>
-        <Link
-          to="/blogs"
-          className={selectedpage == "blogs" ? s.selectedLink : s.link}
-          onClick={() => this.onSelectPage("blogs")}
-        >
-          Blogs
-        </Link>
+        <div className={s.image}>
+          <img src={shivamImg} />
+        </div>
+        <div className={s.links}>
+          <Link
+            to="/"
+            className={selectedpage === "app" ? s.selectedLink : s.link}
+            onClick={() => this.onSelectPage("app")}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className={selectedpage === "about" ? s.selectedLink : s.link}
+            onClick={() => this.onSelectPage("about")}
+          >
+            About
+          </Link>
+          <Link
+            to="/blogs"
+            className={selectedpage === "blogs" ? s.selectedLink : s.link}
+            onClick={() => this.onSelectPage("blogs")}
+          >
+            Blogs
+          </Link>
+        </div>
       </div>
     );
   }

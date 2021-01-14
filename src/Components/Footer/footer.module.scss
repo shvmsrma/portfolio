@@ -1,4 +1,24 @@
 .container {
-  height: 20vh;
-  background-color: green;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 10vh;
+  background-color: inherit;
+
+  img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  img:hover {
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+  }
+
+  .iconFirst {
+    display: flex;
+  }
 }
