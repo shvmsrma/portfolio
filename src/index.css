@@ -5,8 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./assets/svgs/mainbackground.jpg");
-  background-image: cross-fade(80%);
+  background: url("./assets/svgs/mainbackground.jpg");
+
+  /* Add the blur effect */
 }
 
 code {

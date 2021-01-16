@@ -6,9 +6,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-      height: 60px;
-    }
+    font-family: "URW Chancery L", cursive;
+    font-size: 32px;
+    color: white;
   }
   .links {
     flex: 1;
@@ -21,12 +21,18 @@
     .link {
       font-size: 18px;
       text-decoration: none;
-      color: black;
+      color: white;
+    }
+    .themeSwitch {
+      img {
+        height: 20px;
+        width: 20px;
+      }
     }
     .selectedLink {
       font-size: 18px;
       text-decoration: none;
-      color: black;
+      color: white;
     }
     .link:hover {
       font-size: 22px;

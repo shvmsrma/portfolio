@@ -11,7 +11,6 @@ const store = createStore(reducer);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <img src={backgroundImg} />
       <Route />
     </Provider>
   </React.StrictMode>,

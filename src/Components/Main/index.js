@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import * as s from "./main.module.scss";
+import reactIcon from "../../assets/svgs/react.svg";
+import jsIcon from "../../assets/svgs/js.svg";
+import nodeIcon from "../../assets/svgs/node.svg";
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -8,7 +11,15 @@ class Main extends Component {
   render() {
     return (
       <div className={s.container}>
-        <div>Hello, My name is Shivam Sharma</div>
+        <div>
+          <p>Hello,I am Shivam Sharma</p>
+          <p>Full stack Javascript developer(trying to be)</p>
+          <div className={s.icons}>
+            <img src={jsIcon} alt={"Javascript"} />
+            <img src={reactIcon} alt={"React"} />
+            <img src={nodeIcon} alt={"Node"} />
+          </div>
+        </div>
       </div>
     );
   }

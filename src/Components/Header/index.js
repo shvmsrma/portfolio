@@ -4,25 +4,29 @@ import { Link } from "@reach/router";
 import cx from "classnames";
 import { connect } from "react-redux";
 import { setSelectedPage } from "../../Actions/index";
-import shivamImg from "../../assets/svgs/shivam.png";
+import lightThemeIcon from "../../assets/svgs/moonIconLight.svg";
+import darkThemeIcon from "../../assets/svgs/moonIcon.svg";
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      theme: "Dark",
+    };
     this.onSelectPage = this.onSelectPage.bind(this);
   }
   onSelectPage(name) {
     const { setSelectedPage } = this.props;
     setSelectedPage(name);
   }
+  onToggleTheme(type) {
+    this.setState({ theme: type });
+  }
   render() {
     const { selectedpage } = this.props;
-
+    const { theme } = this.state;
     return (
       <div className={s.container}>
-        <div className={s.image}>
-          <img src={shivamImg} />
-        </div>
+        <div className={s.image}>SHIVAM SHARMA</div>
         <div className={s.links}>
           <Link
             to="/"
@@ -45,6 +49,17 @@ class Header extends Component {
           >
             Blogs
           </Link>
+          <div className={s.themeSwitch}>
+            <img
+              onClick={() =>
+                theme === "Dark"
+                  ? this.onToggleTheme("Light")
+                  : this.onToggleTheme("Dark")
+              }
+              src={theme === "Dark" ? lightThemeIcon : darkThemeIcon}
+              alt={theme + "Theme"}
+            />
+          </div>
         </div>
       </div>
     );

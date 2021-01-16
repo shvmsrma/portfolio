@@ -1,7 +1,8 @@
-import { SET_SELECTED_PAGE } from "../Constants/index";
+import { SET_SELECTED_PAGE, SET_THEME } from "../Constants/index";
 
 const initialState = {
   selectedpage: "app",
+  theme: "dark",
 };
 
 export default (state = initialState, action) => {
@@ -11,6 +12,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         selectedpage: payload,
+      };
+    case SET_THEME:
+      return {
+        ...state,
+        theme: payload,
       };
     default:
       return state;
