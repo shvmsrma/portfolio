@@ -14,30 +14,48 @@ class Footer extends Component {
   render() {
     return (
       <div className={s.container}>
-        <div className={s.iconFirst}>
-          <div>Connect with me</div>
-
-          <a>
+        <div className={s.icon}>
+          <a
+            href={"https://www.instagram.com/shvm_srma/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={instagramIcon} alt="Instagram" />
           </a>
         </div>
         <div className={s.icon}>
-          <a>
+          <a
+            href={"https://www.facebook.com/shvmsrma/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={facebookIcon} alt="Facebook" />
           </a>
         </div>
         <div className={s.icon}>
-          <a>
+          <a
+            href={"https://www.gmail.com"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={gmailIcon} alt="Gmail" />
           </a>
         </div>
         <div className={s.icon}>
-          <a>
+          <a
+            href={"https://twitter.com/Shvmsrma"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={twitterIcon} alt="Twitter" />
           </a>
         </div>
         <div className={s.icon}>
-          <a>
+          <a
+            href={"https://www.linkedin.com/in/shvmsrma/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={linkedinIcon} alt="LinkedIn" />
           </a>
         </div>

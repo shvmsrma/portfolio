@@ -8,6 +8,9 @@
   }
   .mainContainer {
     height: calc(100vh - 110px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .footerContainer {
     width: 100%;

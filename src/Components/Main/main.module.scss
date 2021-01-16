@@ -1,3 +1,19 @@
 .container {
   background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 40px;
+    color: white;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    img {
+      height: 48px;
+      width: 48px;
+    }
+  }
 }
