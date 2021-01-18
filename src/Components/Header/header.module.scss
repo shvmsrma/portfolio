@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   display: flex;
+  background-color: rgba(32, 33, 36, 0.5);
   .image {
     flex: 1;
     display: flex;
@@ -19,6 +20,8 @@
     align-items: center;
     justify-content: space-evenly;
     .link {
+      height: 24px;
+      width: 24px;
       font-size: 18px;
       text-decoration: none;
       color: white;
@@ -31,6 +34,8 @@
       }
     }
     .selectedLink {
+      height: 24px;
+      width: 24px;
       font-size: 18px;
       text-decoration: none;
       color: white;
@@ -45,16 +50,17 @@
 }
 
 .containerLight {
+  background-color: #edf2fa;
   .image {
-    color: black;
+    color: #3e4656;
   }
   .links {
     .link {
-      color: black;
+      color: #3e4656;
     }
 
     .selectedLink {
-      color: black;
+      color: #3e4656;
     }
   }
 }
