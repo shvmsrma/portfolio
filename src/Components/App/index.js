@@ -3,14 +3,27 @@ import * as s from "./app.module.scss";
 import Header from "../Header";
 import Footer from "../Footer";
 import Main from "../Main";
+import backgroundImgLight from "../../assets/svgs/backgroundImgLight.jpg";
+import backgroundImg from "../../assets/svgs/mainbackground.jpg";
+import { connect } from "react-redux";
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
+    const { theme } = this.props;
     return (
-      <div className={s.container}>
+      <div
+        className={s.container}
+        style={{
+          backgroundImage:
+            theme === "Light"
+              ? `url(${backgroundImgLight})`
+              : `url(${backgroundImg})`,
+        }}
+      >
         <div className={s.headerContainer}>
           <Header />
         </div>
@@ -26,4 +39,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect((state) => state, null)(App);

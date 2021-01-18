@@ -2,7 +2,7 @@ import { SET_SELECTED_PAGE, SET_THEME } from "../Constants/index";
 
 const initialState = {
   selectedpage: "app",
-  theme: "dark",
+  theme: "Dark",
 };
 
 export default (state = initialState, action) => {

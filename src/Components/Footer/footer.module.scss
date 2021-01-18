@@ -1,20 +1,43 @@
 .container {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-direction: column;
+
   height: 10vh;
   background-color: inherit;
+  border-top: 0.5px solid #494b66;
 
-  img {
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
+  .copyright {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
   }
 
-  img:hover {
-    height: 36px;
-    width: 36px;
-    cursor: pointer;
+  .iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 20px;
+
+    img {
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+    }
+
+    img:hover {
+      height: 36px;
+      width: 36px;
+      cursor: pointer;
+    }
+  }
+}
+
+.containerLight {
+  .copyright {
+    color: #3e4656;
   }
 }

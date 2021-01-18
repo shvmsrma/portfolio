@@ -3,15 +3,14 @@ import * as s from "./header.module.scss";
 import { Link } from "@reach/router";
 import cx from "classnames";
 import { connect } from "react-redux";
-import { setSelectedPage } from "../../Actions/index";
+import { setSelectedPage, setTheme } from "../../Actions/index";
 import lightThemeIcon from "../../assets/svgs/moonIconLight.svg";
 import darkThemeIcon from "../../assets/svgs/moonIcon.svg";
+import Tooltip from "../Tooltip/tooltip";
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      theme: "Dark",
-    };
+    this.state = {};
     this.onSelectPage = this.onSelectPage.bind(this);
   }
   onSelectPage(name) {
@@ -19,46 +18,65 @@ class Header extends Component {
     setSelectedPage(name);
   }
   onToggleTheme(type) {
-    this.setState({ theme: type });
+    const { setTheme } = this.props;
+    setTheme(type);
   }
   render() {
-    const { selectedpage } = this.props;
-    const { theme } = this.state;
+    const { selectedpage, theme } = this.props;
+    const headerStyle = cx(s.container, {
+      [s.containerLight]: theme === "Light",
+    });
+    console.log(theme);
     return (
-      <div className={s.container}>
+      <div className={headerStyle}>
         <div className={s.image}>SHIVAM SHARMA</div>
         <div className={s.links}>
-          <Link
-            to="/"
-            className={selectedpage === "app" ? s.selectedLink : s.link}
-            onClick={() => this.onSelectPage("app")}
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className={selectedpage === "about" ? s.selectedLink : s.link}
-            onClick={() => this.onSelectPage("about")}
-          >
-            About
-          </Link>
-          <Link
-            to="/blogs"
-            className={selectedpage === "blogs" ? s.selectedLink : s.link}
-            onClick={() => this.onSelectPage("blogs")}
-          >
-            Blogs
-          </Link>
+          <Tooltip content={"Go to home Page"} direction={"bottom"}>
+            <Link
+              to="/"
+              className={selectedpage === "app" ? s.selectedLink : s.link}
+              onClick={() => this.onSelectPage("app")}
+            >
+              Home
+            </Link>
+          </Tooltip>
+          <Tooltip content={"Go to about page"} direction={"bottom"}>
+            <Link
+              to="/about"
+              className={selectedpage === "about" ? s.selectedLink : s.link}
+              onClick={() => this.onSelectPage("about")}
+            >
+              About
+            </Link>
+          </Tooltip>
+          <Tooltip content={"Go to Blogs"} direction={"bottom"}>
+            <Link
+              to="/blogs"
+              className={selectedpage === "blogs" ? s.selectedLink : s.link}
+              onClick={() => this.onSelectPage("blogs")}
+            >
+              Blogs
+            </Link>
+          </Tooltip>
           <div className={s.themeSwitch}>
-            <img
-              onClick={() =>
+            <Tooltip
+              content={
                 theme === "Dark"
-                  ? this.onToggleTheme("Light")
-                  : this.onToggleTheme("Dark")
+                  ? "Switch to Light theme"
+                  : "Switch to Dark Theme"
               }
-              src={theme === "Dark" ? lightThemeIcon : darkThemeIcon}
-              alt={theme + "Theme"}
-            />
+              direction={"bottom"}
+            >
+              <img
+                onClick={() =>
+                  theme === "Dark"
+                    ? this.onToggleTheme("Light")
+                    : this.onToggleTheme("Dark")
+                }
+                src={theme === "Dark" ? lightThemeIcon : darkThemeIcon}
+                alt={theme + "Theme"}
+              />
+            </Tooltip>
           </div>
         </div>
       </div>
@@ -67,5 +85,6 @@ class Header extends Component {
 }
 const mapActionToProps = {
   setSelectedPage,
+  setTheme,
 };
 export default connect((state) => state, mapActionToProps)(Header);
