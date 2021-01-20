@@ -43,7 +43,9 @@ class Carousel extends Component {
             className={s.arrow}
             onClick={() => this.changeImage("previous")}
           />
-          <img src={imgArray[selectedImg]} className={s.selectedImg} />
+          <div className={s.mainImage}>
+            <img src={imgArray[selectedImg]} className={s.selectedImg} />
+          </div>
           <img
             src={theme === "Light" ? rightArrow : rightArrowDark}
             className={s.arrow}

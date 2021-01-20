@@ -18,9 +18,11 @@ class Projects extends Component {
     const renderProjects = () => {
       const renderProject = projectData.map((project, key) => {
         return (
-          <Slide>
-            <Card data={project} key={key} thememode={theme} />
-          </Slide>
+          <div className={s.cardContainer}>
+            <Slide>
+              <Card data={project} key={key} thememode={theme} />
+            </Slide>
+          </div>
         );
       });
       return renderProject;

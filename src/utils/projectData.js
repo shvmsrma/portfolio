@@ -12,7 +12,9 @@ export const projectData = [
   },
   {
     Name: "Yo Yo Pizza",
-    Description: "Chatbot for ordering pizza ",
+    Description:
+      "Restaurant website made in react to display all the menu items and displaying particular dish",
+
     Stack: ["HTML", "CSS", "DialogFlow"],
     Images: [underConstructionImage, und2, und3],
   },
