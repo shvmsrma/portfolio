@@ -1,0 +1,16 @@
+.container {
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    .arrow {
+      height: 40px;
+      width: 40px;
+      padding: 2px;
+      cursor: pointer;
+    }
+    .selectedImg {
+      height: 300px;
+      width: 300px;
+    }
+  }
+}

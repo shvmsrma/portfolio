@@ -40,13 +40,13 @@ class Header extends Component {
               Home
             </Link>
           </Tooltip>
-          <Tooltip content={"Go to about page"} direction={"bottom"}>
+          <Tooltip content={"Go to projects page"} direction={"bottom"}>
             <Link
-              to="/about"
-              className={selectedpage === "about" ? s.selectedLink : s.link}
-              onClick={() => this.onSelectPage("about")}
+              to="/projects"
+              className={selectedpage === "projects" ? s.selectedLink : s.link}
+              onClick={() => this.onSelectPage("projects")}
             >
-              About
+              Projects
             </Link>
           </Tooltip>
           <Tooltip content={"Go to Blogs"} direction={"bottom"}>

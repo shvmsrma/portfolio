@@ -12,12 +12,14 @@
     .blog {
       margin-left: 40px;
       margin-bottom: 40px;
+
       a {
         text-decoration: none;
       }
       img {
         height: 200px;
       }
+
       .title {
         font-size: 30px;
         color: white;
@@ -66,6 +68,12 @@
     .blog {
       a {
         text-decoration: none;
+      }
+
+      hr {
+        border-bottom: 1px solid #edf2fa;
+        border-width: thin;
+        margin-right: 10%;
       }
 
       .title {
