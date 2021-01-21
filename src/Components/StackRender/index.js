@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import tagImage from "../../assets/svgs/tag.svg";
 import * as s from "./stack.module.scss";
+import cx from "classnames";
 class StackRender extends Component {
   constructor(props) {
     super(props);
@@ -13,9 +14,13 @@ class StackRender extends Component {
       });
       return textRender;
     };
-    const { data, theme } = this.props;
+    const { theme } = this.props;
+
+    const stackRenderStyle = cx(s.container, {
+      [s.containerLight]: theme === "Light",
+    });
     return (
-      <div className={s.container}>
+      <div className={stackRenderStyle}>
         <div className={s.image}>
           <img src={tagImage} />
         </div>

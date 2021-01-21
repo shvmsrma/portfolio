@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import * as s from "./projects.module.scss";
 import Header from "../Header";
 import Footer from "../Footer";
-import backgroundImgLight from "../../assets/svgs/backgroundImgLight.jpg";
-import backgroundImg from "../../assets/svgs/mainbackground.jpg";
+import cx from "classnames";
 import { connect } from "react-redux";
 import { Slide } from "react-awesome-reveal";
 import { projectData } from "../../utils/projectData";
@@ -15,6 +14,9 @@ class Projects extends Component {
   }
   render() {
     const { theme } = this.props;
+    const projectStyle = cx(s.container, {
+      [s.containerLight]: theme === "Light",
+    });
     const renderProjects = () => {
       const renderProject = projectData.map((project, key) => {
         return (
@@ -28,7 +30,7 @@ class Projects extends Component {
       return renderProject;
     };
     return (
-      <div className={s.container}>
+      <div className={projectStyle}>
         <div className={s.headerContainer}>
           <Header />
         </div>

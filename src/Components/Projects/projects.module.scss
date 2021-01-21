@@ -30,3 +30,17 @@
     bottom: 5px;
   }
 }
+
+.containerLight {
+  background-color: white;
+
+  .mainContainer {
+    p {
+      color: 3e4656;
+    }
+
+    .cardContainer {
+      border-bottom: 0.1px solid #edf2fa;
+    }
+  }
+}

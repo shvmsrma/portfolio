@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as s from "./card.module.scss";
 import Carousel from "../Carousel";
 import StackRender from "../StackRender";
+import cx from "classnames";
 class Card extends Component {
   constructor(props) {
     super(props);
@@ -10,9 +11,11 @@ class Card extends Component {
   render() {
     const { Name, Description, Stack, Images } = this.props.data;
     const { thememode } = this.props;
-
+    const cardStyle = cx(s.container, {
+      [s.containerLight]: thememode === "Light",
+    });
     return (
-      <div className={s.container}>
+      <div className={cardStyle}>
         <div className={s.carousel}>
           <Carousel imgArray={Images} theme={thememode} num={Images.length} />
         </div>
