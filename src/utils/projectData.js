@@ -17,8 +17,7 @@ export const projectData = [
   },
   {
     Name: "Yo Yo Pizza",
-    Description:
-      "Restaurant website made in react to display all the menu items and displaying particular dish",
+    Description: `HTML CSS based chatbot with NLP using Dialogflow try it out at yo-yopizza.herokuapp.com`,
 
     Stack: ["HTML", "CSS", "DialogFlow"],
     Images: [yoyoPizza1, yoyoPizza2, yoyoPizza3],
