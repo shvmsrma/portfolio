@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  .image {
+    img {
+      height: 20px;
+      width: 20px;
+    }
+  }
+  .stacks {
+    display: flex;
+    .stackUsed {
+      color: white;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.containerLight {
+  .stacks {
+    .stackUsed {
+      color: #3e4656;
+    }
+  }
+}

@@ -1,7 +1,45 @@
 .container {
+  display: flex;
   background-color: inherit;
-  height: 400px;
-  width: 400px;
-  color: red;
-  margin-bottom: 40px;
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  .details {
+    width: calc(80% - 380px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .nameDescription {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .name {
+        font-size: 28px;
+        color: white;
+      }
+      .description {
+        margin-top: 15px;
+        font-size: 18px;
+        color: white;
+      }
+    }
+    .stack {
+    }
+  }
+}
+
+.containerLight {
+  .details {
+    .nameDescription {
+      .name {
+        color: #3e4656;
+      }
+      .description {
+        color: #3e4656;
+      }
+    }
+    .stack {
+    }
+  }
 }

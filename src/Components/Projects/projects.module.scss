@@ -18,11 +18,29 @@
     p {
       color: white;
     }
+
+    .cardContainer {
+      border-bottom: 0.1px solid #494b66;
+    }
   }
   .footerContainer {
     width: 100%;
 
     position: absolute;
     bottom: 5px;
+  }
+}
+
+.containerLight {
+  background-color: white;
+
+  .mainContainer {
+    p {
+      color: 3e4656;
+    }
+
+    .cardContainer {
+      border-bottom: 0.1px solid #edf2fa;
+    }
   }
 }
