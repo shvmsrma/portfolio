@@ -1,5 +1,3 @@
-import underConstructionImage from "../assets/svgs/underconstruction.png";
-import und2 from "../assets/svgs/und2.jpg";
 import und3 from "../assets/svgs/und3.jpg";
 import yoyoPizza1 from "../assets/svgs/yoyopizza1.png";
 import yoyoPizza2 from "../assets/svgs/yoyopizza2.png";

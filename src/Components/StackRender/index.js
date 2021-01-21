@@ -22,7 +22,7 @@ class StackRender extends Component {
     return (
       <div className={stackRenderStyle}>
         <div className={s.image}>
-          <img src={tagImage} />
+          <img src={tagImage} alt={"tag"} />
         </div>
         <div className={s.stacks}>{textList()}</div>
       </div>
