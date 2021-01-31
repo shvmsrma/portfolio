@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as s from "./header.module.scss";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import cx from "classnames";
 import { connect } from "react-redux";
 import { setSelectedPage, setTheme } from "../../Actions/index";
@@ -35,7 +35,6 @@ class Header extends Component {
             <Link
               to="/"
               className={selectedpage === "app" ? s.selectedLink : s.link}
-              onClick={() => this.onSelectPage("app")}
             >
               Home
             </Link>
@@ -44,7 +43,6 @@ class Header extends Component {
             <Link
               to="/projects"
               className={selectedpage === "projects" ? s.selectedLink : s.link}
-              onClick={() => this.onSelectPage("projects")}
             >
               Projects
             </Link>
@@ -53,7 +51,6 @@ class Header extends Component {
             <Link
               to="/blogs"
               className={selectedpage === "blogs" ? s.selectedLink : s.link}
-              onClick={() => this.onSelectPage("blogs")}
             >
               Blogs
             </Link>

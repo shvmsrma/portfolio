@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import * as s from "./blogs.module.scss";
-import Header from "../Header";
-import Footer from "../Footer";
 import cx from "classnames";
 import { connect } from "react-redux";
 import { blogLists } from "../../utils/blogconfig";
@@ -27,7 +25,7 @@ class Blogs extends Component {
         return (
           <Slide>
             <div className={s.blog}>
-              <a href={blog.url}>
+              <a href={blog.url} target="_blank" rel="noopener noreferrer">
                 <div className={s.title}>{blog.title}</div>
                 <div className={s.socialButtonreadTime}>
                   <div className={s.socialButton}>
@@ -56,13 +54,7 @@ class Blogs extends Component {
 
     return (
       <div className={blogStyle}>
-        <div className={s.headerContainer}>
-          <Header />
-        </div>
         <div className={s.mainContainer}>{blogList()}</div>
-        <div className={s.footerContainer}>
-          <Footer />
-        </div>
       </div>
     );
   }

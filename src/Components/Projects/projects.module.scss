@@ -1,9 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background-color: #212337;
-
+  background-color: inherit;
+  height: 100%;
+  width: 100%;
   .headerContainer {
     display: flex;
     justify-content: center;
@@ -32,8 +32,6 @@
 }
 
 .containerLight {
-  background-color: white;
-
   .mainContainer {
     p {
       color: 3e4656;

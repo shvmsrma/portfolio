@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import * as s from "./app.module.scss";
 import Header from "../Header";
 import Footer from "../Footer";
-import Main from "../Main";
+import Router from "../Router";
 import backgroundImgLight from "../../assets/svgs/backgroundImgLight.jpg";
 import backgroundImg from "../../assets/svgs/mainbackground.jpg";
 import { connect } from "react-redux";
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +27,7 @@ class App extends Component {
           <Header />
         </div>
         <div className={s.mainContainer}>
-          <Main />
+          <Router />
         </div>
 
         <div className={s.footerContainer}>
