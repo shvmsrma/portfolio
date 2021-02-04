@@ -31,13 +31,7 @@ class Projects extends Component {
     };
     return (
       <div className={projectStyle}>
-        <div className={s.headerContainer}>
-          <Header />
-        </div>
         <div className={s.mainContainer}>{renderProjects()}</div>
-        <div className={s.footerContainer}>
-          <Footer />
-        </div>
       </div>
     );
   }

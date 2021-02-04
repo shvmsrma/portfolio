@@ -1,8 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background-color: #212337;
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
   .headerContainer {
     display: flex;
     justify-content: center;
@@ -62,8 +63,6 @@
 }
 
 .containerLight {
-  background-color: white;
-
   .mainContainer {
     .blog {
       a {

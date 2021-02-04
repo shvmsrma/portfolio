@@ -18,4 +18,12 @@ export const blogLists = [
     url:
       "https://shivamsharma.hashnode.dev/javascript-and-react-learnings-of-some-past-months",
   },
+  {
+    title: "How to close dropdown when clicked outside it.",
+    description: `During my internship. One day I was working on building some dropdown filters for our company's product. Initially, I thought yeah it's not too big a deal....`,
+    date: "Jan 27 2021",
+    readTime: 4,
+    url:
+      "https://shivamsharma.hashnode.dev/how-to-close-the-dropdown-when-clicked-outside-its-division-in-react",
+  },
 ];
