@@ -29,7 +29,6 @@ class Header extends Component {
     console.log(theme);
     return (
       <div className={headerStyle}>
-        <div className={s.image}>SHIVAM SHARMA</div>
         <div className={s.links}>
           <Tooltip content={"Go to home Page"} direction={"bottom"}>
             <Link

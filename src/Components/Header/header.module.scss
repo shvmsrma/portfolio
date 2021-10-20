@@ -1,23 +1,16 @@
 .container {
-  width: 100%;
+  width: 200px;
   display: flex;
   background-color: rgba(32, 33, 36, 0.5);
-  height: 60px;
-  .image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: "URW Chancery L", cursive;
-    font-size: 32px;
-    color: white;
-    margin-left: 5%;
-  }
+  height: 400px;
+  align-self: center;
+  flex-direction: column;
+
   .links {
     flex: 1;
     display: flex;
+    flex-direction: column;
     height: 60px;
-    //width: 600px;
     background-color: inherit;
     align-items: center;
     justify-content: space-evenly;

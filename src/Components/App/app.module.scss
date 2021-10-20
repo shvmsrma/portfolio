@@ -2,21 +2,24 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  .headerContainer {
-    display: flex;
-    justify-content: center;
-  }
-  .mainContainer {
-    height: calc(100vh - 160px);
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .footerContainer {
-    width: 100%;
+  width: 100vw;
+  overflow: hidden;
 
-    position: absolute;
-    bottom: 5px;
+  overflow: hidden;
+  .headerAndMain {
+    display: flex;
+    flex: 9;
+    .headerContainer {
+      height: 100%;
+      display: flex;
+      flex: 1;
+    }
+    .mainContainer {
+      flex: 8;
+    }
+  }
+
+  .footerContainer {
+    flex: 1;
   }
 }
