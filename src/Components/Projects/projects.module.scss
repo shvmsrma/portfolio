@@ -3,11 +3,8 @@
   flex-direction: column;
   background-color: inherit;
   height: 100%;
-  width: 100%;
-  .headerContainer {
-    display: flex;
-    justify-content: center;
-  }
+  // width: 100%;
+
   .mainContainer {
     height: calc(100vh - 220px);
     z-index: 0;
@@ -24,7 +21,7 @@
     }
   }
   .footerContainer {
-    width: 100%;
+    // width: 100%;
 
     position: absolute;
     bottom: 5px;

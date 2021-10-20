@@ -29,7 +29,6 @@ class Header extends Component {
     console.log(theme);
     return (
       <div className={headerStyle}>
-        <div className={s.image}>SHIVAM SHARMA</div>
         <div className={s.links}>
           <Tooltip content={"Go to home Page"} direction={"bottom"}>
             <Link
@@ -53,6 +52,16 @@ class Header extends Component {
               className={selectedpage === "blogs" ? s.selectedLink : s.link}
             >
               Blogs
+            </Link>
+          </Tooltip>
+          <Tooltip content={"Past Experience"} direction={"bottom"}>
+            <Link
+              to="/experience"
+              className={
+                selectedpage === "experience" ? s.selectedLink : s.link
+              }
+            >
+              Experience
             </Link>
           </Tooltip>
           <div className={s.themeSwitch}>

@@ -5,12 +5,17 @@ import jsIcon from "../../assets/svgs/js.svg";
 import nodeIcon from "../../assets/svgs/node.svg";
 import cx from "classnames";
 import { connect } from "react-redux";
+
 import { Bounce } from "react-awesome-reveal";
+import Autotype from "../Autotype";
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      textRender: "",
+    };
   }
+
   render() {
     const { theme } = this.props;
     const mainStyle = cx(s.container, {
@@ -18,17 +23,16 @@ class Main extends Component {
     });
     return (
       <div className={mainStyle}>
-        <Bounce>
-          <div>
-            <p>Hello,I am Shivam Sharma</p>
-            <p>Full stack Javascript developer(trying to be)</p>
-            <div className={s.icons}>
-              <img src={jsIcon} alt={"Javascript"} />
-              <img src={reactIcon} alt={"React"} />
-              <img src={nodeIcon} alt={"Node"} />
-            </div>
-          </div>
-        </Bounce>
+        <div className={s.image}>SHIVAM SHARMA</div>
+        <div className={s.mainContent}>
+          <Bounce>
+            <Autotype
+              textToDisplay={
+                "Hello,I am Shivam Sharma, Full stack Javascript developer..."
+              }
+            />
+          </Bounce>
+        </div>
       </div>
     );
   }
