@@ -12,7 +12,10 @@
       align-self: center;
     }
     .mainContainer {
+      //padding: 20px;
       flex: 8;
+      height: calc(100vh - 100px);
+      overflow: auto;
     }
   }
 

@@ -26,6 +26,7 @@ class ExperienceCard extends Component {
             <div className={s.endDate}> {" -  " + endDate}</div>
           </div>
         </div>
+        <span className={s.line}></span>
       </div>
     );
   }

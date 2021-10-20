@@ -32,4 +32,15 @@ export const experienceData = [
     startingDate: "June 2019",
     endDate: "August 2019",
   },
+  {
+    title: "Software Development Engineer(Intern)",
+    companty: "White code labs",
+    description: [
+      "Worked on Developing APIs for a Mobile based Application.",
+      "Integrated different 3rd Party APIs together to bring news of the same genre.",
+      "News can be filtered according to name,country and different tags.",
+    ],
+    startingDate: "June 2019",
+    endDate: "August 2019",
+  },
 ];
