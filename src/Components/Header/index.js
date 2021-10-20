@@ -54,6 +54,16 @@ class Header extends Component {
               Blogs
             </Link>
           </Tooltip>
+          <Tooltip content={"Past Experience"} direction={"bottom"}>
+            <Link
+              to="/experience"
+              className={
+                selectedpage === "experience" ? s.selectedLink : s.link
+              }
+            >
+              Experience
+            </Link>
+          </Tooltip>
           <div className={s.themeSwitch}>
             <Tooltip
               content={

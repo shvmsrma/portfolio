@@ -1,0 +1,42 @@
+.container {
+  margin-left: 20%;
+  height: 300px;
+  width: 450px;
+  background-color: white;
+  margin-top: 50px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    // background-color:bl;
+    .companyName {
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      background-color: yellow;
+    }
+    .descriptionContainer {
+      padding-left: 10px;
+      flex: 4;
+      background-color: pink;
+    }
+    .date {
+      display: flex;
+      align-items: center;
+      padding-right: 10px;
+      justify-content: flex-end;
+      flex: 1;
+      background-color: red;
+    }
+  }
+}
+.container:nth-child(odd) {
+  align-self: flex-start;
+}
+.container:nth-child(even) {
+  margin-right: -50px;
+  align-self: center;
+}
