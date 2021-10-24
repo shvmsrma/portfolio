@@ -3,7 +3,7 @@ import * as s from "./app.module.scss";
 import Header from "../Header";
 import Footer from "../Footer";
 import Router from "../Router";
-import backgroundImgLight from "../../assets/svgs/backgroundImgLight.webp";
+import backgroundImgLight from "../../assets/svgs/backgroundImgLight.png";
 import backgroundImg from "../../assets/svgs/background.jpeg";
 import { connect } from "react-redux";
 class App extends Component {

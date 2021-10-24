@@ -1,9 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 100px);
-  width: calc(100vw - 180px);
-  overflow: visible;
+  height: calc(100vh - 120px);
+  //width: calc(100vw - 190px);
+  //overflow: visible;
 
   .image {
     width: 100%;
@@ -14,7 +14,7 @@
     font-family: "URW Chancery L", cursive;
     font-size: 32px;
     color: white;
-    padding: 5px;
+    //padding: 5px;
   }
   .mainContent {
     //height: 100%;
@@ -25,8 +25,15 @@
     justify-content: center;
     align-items: center;
   }
+
+  .description {
+    width: 60%;
+    font-size: 22px;
+    color: white;
+  }
+
   p {
-    font-size: 40px;
+    font-size: 54px;
     color: white;
   }
   .icons {
@@ -41,6 +48,12 @@
 
 .containerLight {
   p {
+    color: #3e4656;
+  }
+  .image {
+    color: #3e4656;
+  }
+  .description {
     color: #3e4656;
   }
 }

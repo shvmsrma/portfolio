@@ -34,6 +34,7 @@ class Header extends Component {
             <Link
               to="/"
               className={selectedpage === "app" ? s.selectedLink : s.link}
+              onClick={() => this.onSelectPage("app")}
             >
               Home
             </Link>
@@ -42,6 +43,7 @@ class Header extends Component {
             <Link
               to="/projects"
               className={selectedpage === "projects" ? s.selectedLink : s.link}
+              onClick={() => this.onSelectPage("projects")}
             >
               Projects
             </Link>
@@ -50,6 +52,7 @@ class Header extends Component {
             <Link
               to="/blogs"
               className={selectedpage === "blogs" ? s.selectedLink : s.link}
+              onClick={() => this.onSelectPage("blogs")}
             >
               Blogs
             </Link>
@@ -60,8 +63,19 @@ class Header extends Component {
               className={
                 selectedpage === "experience" ? s.selectedLink : s.link
               }
+              onClick={() => this.onSelectPage("experience")}
             >
               Experience
+            </Link>
+          </Tooltip>
+          <Tooltip content={"Download Resume"} direction={"bottom"}>
+            <Link
+              to="../../utils/Shivam'sResume.pdf"
+              target="_blank"
+              className={s.link}
+              download
+            >
+              Download Resume
             </Link>
           </Tooltip>
           <div className={s.themeSwitch}>

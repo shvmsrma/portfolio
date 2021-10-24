@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import * as s from "./main.module.scss";
-import reactIcon from "../../assets/svgs/react.svg";
-import jsIcon from "../../assets/svgs/js.svg";
-import nodeIcon from "../../assets/svgs/node.svg";
+
 import cx from "classnames";
 import { connect } from "react-redux";
 
@@ -26,12 +24,14 @@ class Main extends Component {
         <div className={s.image}>SHIVAM SHARMA</div>
         <div className={s.mainContent}>
           <Bounce>
-            <Autotype
-              textToDisplay={
-                "Hello,I am Shivam Sharma, Full stack Javascript developer..."
-              }
-            />
+            <Autotype textToDisplay={"Hello,I am Shivam Sharma"} />
           </Bounce>
+          <div className={s.description}>
+            I am a Full Stack JavaScript Developer currently working at
+            Zettabytes Inc (Zbio) as a Member of the Technical Staff. Working on
+            Building Roost-Desktop which helps developers in collaborating with
+            each other easily and also that is a full-scale Kubernetes platform.
+          </div>
         </div>
       </div>
     );
